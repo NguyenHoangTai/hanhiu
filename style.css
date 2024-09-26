@@ -63,15 +63,14 @@ header .tagline {
 }
 
 .slides {
-    display: flex; /* Sử dụng flexbox để sắp xếp các bức ảnh theo hàng */
+    display: flex; /* Sắp xếp các ảnh theo hàng ngang */
     transition: transform 0.5s ease-in-out; /* Thêm hiệu ứng chuyển động */
     overflow: hidden; /* Ẩn các bức ảnh không nằm trong viewport */
-    border-radius: 10px;
-    max-height: 400px; /* Giới hạn chiều cao */
+    width: 100%; /* Đặt chiều rộng cho .slides */
 }
 
 .slides img {
-    width: 100%; /* Đảm bảo mỗi bức ảnh chiếm toàn bộ chiều rộng */
+    width: 100%; /* Mỗi ảnh chiếm toàn bộ chiều rộng của .slides */
     height: auto; /* Giữ tỷ lệ khung hình cho bức ảnh */
     flex-shrink: 0; /* Ngăn không cho các bức ảnh thu nhỏ */
 }
