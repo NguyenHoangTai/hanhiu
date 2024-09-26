@@ -16,5 +16,11 @@ document.querySelector('.arrow-right').addEventListener('click', () => {
     showSlides(slideIndex);
 });
 
-// Ngăn không cho slideshow tự động chuyển đổi
-// Xóa hoặc không thêm bất kỳ mã nào tự động
+// Nếu cần thêm mũi tên bên trái
+document.querySelector('.arrow-left').addEventListener('click', () => {
+    slideIndex--;
+    if (slideIndex < 0) {
+        slideIndex = totalSlides - 1; // Quay về ảnh cuối cùng
+    }
+    showSlides(slideIndex);
+});
