@@ -59,19 +59,14 @@ header .tagline {
 .slideshow {
     margin: 40px 0;
     text-align: center;
-}
-
-.slideshow h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #ff4081;
+    position: relative; /* Thêm position relative cho bố cục */
 }
 
 .slides {
     display: flex;
     overflow: hidden;
     border-radius: 10px;
-    max-height: 400px; /* Giới hạn chiều cao cho slideshow */
+    max-height: 400px;
 }
 
 .slides img {
@@ -79,6 +74,22 @@ header .tagline {
     height: auto;
     object-fit: cover;
     transition: transform 0.5s ease-in-out;
+}
+
+.arrow-right {
+    position: absolute; /* Đặt mũi tên ở vị trí tuyệt đối */
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.7); /* Màu trắng mờ */
+    cursor: pointer; /* Hiển thị con trỏ tay khi hover */
+    z-index: 10; /* Đảm bảo mũi tên nằm trên ảnh */
+}
+
+/* Ẩn mũi tên khi không cần thiết */
+.arrow-right:hover {
+    color: #fff; /* Đổi màu khi hover */
 }
 
 /* Thiết lập cho phần blog posts */
@@ -126,15 +137,11 @@ footer {
         font-size: 2em;
     }
 
-    .introduction h2, .slideshow h2, .blog-posts h2 {
-        font-size: 1.8em;
+    .post {
+        padding: 15px;
     }
 
-    .post h3 {
-        font-size: 1.3em;
-    }
-
-    .post p {
-        font-size: 1em;
+    .arrow-right {
+        font-size: 2em; /* Điều chỉnh kích thước mũi tên cho màn hình nhỏ */
     }
 }
