@@ -59,12 +59,12 @@ header .tagline {
 .slideshow {
     margin: 40px 0;
     text-align: center;
-    position: relative; /* Thêm position relative cho bố cục */
+    position: relative; /* Đặt vị trí tương đối cho bố cục */
 }
 
 .slides {
     display: flex; /* Sắp xếp các ảnh theo hàng ngang */
-    transition: transform 0.5s ease-in-out; /* Thêm hiệu ứng chuyển động */
+    transition: transform 0.5s ease-in-out; /* Hiệu ứng chuyển động */
     overflow: hidden; /* Ẩn các bức ảnh không nằm trong viewport */
     width: 100%; /* Đặt chiều rộng cho .slides */
 }
@@ -74,6 +74,7 @@ header .tagline {
     height: auto; /* Giữ tỷ lệ khung hình cho bức ảnh */
     flex-shrink: 0; /* Ngăn không cho các bức ảnh thu nhỏ */
 }
+
 
 .arrow-right {
     position: absolute; /* Đặt mũi tên ở vị trí tuyệt đối */
