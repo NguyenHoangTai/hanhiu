@@ -71,7 +71,8 @@ header .tagline {
     display: flex;
     overflow: hidden;
     border-radius: 10px;
-    max-height: 400px;
+    max-height: 400px; /* Giới hạn chiều cao của ảnh trên màn hình lớn */
+    position: relative;
 }
 
 .slides img {
@@ -79,6 +80,7 @@ header .tagline {
     height: auto;
     object-fit: cover;
     transition: transform 0.5s ease-in-out;
+    max-height: 400px;
 }
 
 /* Thiết lập cho phần blog posts */
@@ -136,5 +138,12 @@ footer {
 
     .post p {
         font-size: 1em;
+    }
+
+    /* Điều chỉnh kích thước ảnh cho thiết bị di động */
+    .slides img {
+        max-height: 250px; /* Giới hạn chiều cao ảnh khi xem trên điện thoại */
+        width: 100%;
+        height: auto;
     }
 }
