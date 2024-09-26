@@ -147,4 +147,7 @@ footer {
     .arrow-right {
         font-size: 2em; /* Điều chỉnh kích thước mũi tên cho màn hình nhỏ */
     }
+	.arrow-left {
+        font-size: 2em; /* Điều chỉnh kích thước mũi tên cho màn hình nhỏ */
+    }
 }
