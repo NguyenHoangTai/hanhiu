@@ -1,20 +1,13 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
+const slides = document.querySelector('.slides');
+const totalSlides = document.querySelectorAll('.slides img').length;
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function showSlides() {
+    slideIndex++;
+    if (slideIndex >= totalSlides) {
+        slideIndex = 0;
+    }
+    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slide");
-  
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-}
+setInterval(showSlides, 3000); // Chuyển slide sau mỗi 3 giây
