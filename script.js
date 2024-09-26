@@ -10,4 +10,4 @@ function showSlides() {
     slides.style.transform = `translateX(${-slideIndex * 100}%)`;
 }
 
-setInterval(showSlides, 3000); // Chuyển slide sau mỗi 3 giây
+setInterval(showSlides, 4000); // Chuyển slide sau mỗi 4 giây
