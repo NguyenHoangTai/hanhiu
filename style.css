@@ -57,39 +57,42 @@ header .tagline {
 
 /* Thiết lập slideshow */
 .slideshow {
-    margin: 40px 0;
-    text-align: center;
-    position: relative; /* Đặt vị trí tương đối cho bố cục */
+    position: relative;
+    max-width: 800px; /* Đặt chiều rộng tối đa cho slideshow */
+    margin: 0 auto; /* Căn giữa slideshow */
+    overflow: hidden; /* Ẩn các bức ảnh không nằm trong viewport */
 }
 
 .slides {
     display: flex; /* Sắp xếp các ảnh theo hàng ngang */
-    transition: transform 0.5s ease-in-out; /* Hiệu ứng chuyển động */
-    overflow: hidden; /* Ẩn các bức ảnh không nằm trong viewport */
-    width: 100%; /* Đặt chiều rộng cho .slides */
+    transition: transform 0.5s ease-in-out; /* Thêm hiệu ứng chuyển động */
 }
 
 .slides img {
     width: 100%; /* Mỗi ảnh chiếm toàn bộ chiều rộng của .slides */
     height: auto; /* Giữ tỷ lệ khung hình cho bức ảnh */
-    flex-shrink: 0; /* Ngăn không cho các bức ảnh thu nhỏ */
+    display: none; /* Ẩn tất cả ảnh mặc định */
 }
 
+.slides img.active {
+    display: block; /* Chỉ hiển thị ảnh đang hoạt động */
+}
 
-.arrow-right {
-    position: absolute; /* Đặt mũi tên ở vị trí tuyệt đối */
+.arrow {
+    position: absolute;
     top: 50%;
-    right: 10px;
     transform: translateY(-50%);
     font-size: 3em;
-    color: rgba(255, 255, 255, 0.7); /* Màu trắng mờ */
-    cursor: pointer; /* Hiển thị con trỏ tay khi hover */
-    z-index: 10; /* Đảm bảo mũi tên nằm trên ảnh */
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
 }
 
-/* Ẩn mũi tên khi không cần thiết */
-.arrow-right:hover {
-    color: #fff; /* Đổi màu khi hover */
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
 }
 
 /* Thiết lập cho phần blog posts */
