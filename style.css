@@ -71,7 +71,7 @@ header .tagline {
     display: flex;
     overflow: hidden;
     border-radius: 10px;
-    max-height: 400px;
+    max-height: 400px; /* Giới hạn chiều cao cho slideshow */
 }
 
 .slides img {
