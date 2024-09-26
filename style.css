@@ -1,149 +1,75 @@
-/* Đặt các thiết lập cơ bản cho trang web */
-* {
+/* Đặt nền cho trang */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f0f0f0; /* Màu nền nhẹ nhàng */
+    color: #333; /* Màu chữ tối */
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Thiết lập cho phần header */
-header {
-    background-color: #ff4081;
-    padding: 40px 0;
+/* Đặt kiểu cho tiêu đề chính */
+h1 {
     text-align: center;
-    color: #fff;
-}
-
-header h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
+    margin: 20px 0;
 }
 
-header .tagline {
-    font-size: 1.2em;
-    font-style: italic;
-}
-
-/* Thiết lập cho phần introduction */
-.introduction {
-    margin: 40px 0;
+/* Kiểu cho các tiêu đề phụ */
+h2 {
+    font-size: 2em;
+    margin: 10px 0;
     text-align: center;
 }
 
-.introduction h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #ff4081;
+/* Kiểu cho các đoạn văn bản */
+p {
+    font-size: 1em;
+    line-height: 1.6; /* Đảm bảo dễ đọc */
+    margin: 10px 20px;
 }
 
-.introduction p {
-    font-size: 1.1em;
-    line-height: 1.8;
-    color: #555;
-}
-
-/* Thiết lập slideshow */
+/* Slideshow */
 .slideshow {
-    margin: 40px 0;
-    text-align: center;
-}
-
-.slideshow h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #ff4081;
-}
-
-.slides {
-    display: flex;
-    overflow: hidden;
-    border-radius: 10px;
-    max-height: 400px; /* Giới hạn chiều cao của ảnh trên màn hình lớn */
     position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden; /* Ẩn các phần tử vượt quá */
 }
 
+/* Đặt kiểu cho các ảnh trong slideshow */
 .slides img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.5s ease-in-out;
-    max-height: 400px;
+    max-width: 100%;      /* Giới hạn chiều rộng tối đa của ảnh */
+    height: auto;         /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
+    object-fit: cover;    /* Đảm bảo ảnh lấp đầy không gian mà không bị biến dạng */
+    transition: transform 0.5s ease-in-out; /* Hiệu ứng chuyển động mượt mà */
 }
 
-/* Thiết lập cho phần blog posts */
-.blog-posts {
-    margin: 40px 0;
+/* Kiểu cho các button điều hướng */
+button {
+    background-color: #007BFF; /* Màu nền cho button */
+    color: white; /* Màu chữ trắng */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer; /* Con trỏ chuột thành hình bàn tay khi hover */
+    border-radius: 5px; /* Bo góc */
+    margin: 20px;
 }
 
-.blog-posts h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #ff4081;
-    text-align: center;
+/* Hiệu ứng hover cho button */
+button:hover {
+    background-color: #0056b3; /* Màu khi hover */
 }
 
-.post {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.post h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #ff4081;
-}
-
-.post p {
-    font-size: 1.1em;
-    color: #555;
-}
-
-/* Thiết lập footer */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 0.9em;
-    color: #888;
-}
-
-/* Responsive cho các thiết bị di động */
+/* Responsive cho thiết bị di động */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
+    h1 {
+        font-size: 2em; /* Kích thước tiêu đề lớn hơn cho điện thoại */
     }
 
-    .introduction h2, .slideshow h2, .blog-posts h2 {
-        font-size: 1.8em;
-    }
-
-    .post h3 {
-        font-size: 1.3em;
-    }
-
-    .post p {
-        font-size: 1em;
-    }
-
-    /* Điều chỉnh kích thước ảnh cho thiết bị di động */
     .slides img {
-        max-height: 250px; /* Giới hạn chiều cao ảnh khi xem trên điện thoại */
-        width: 100%;
-        height: auto;
+        max-height: 250px; /* Giới hạn chiều cao ảnh cho điện thoại */
+        width: 100%;       /* Chiều rộng tối đa 100% */
+        height: auto;      /* Chiều cao tự động */
     }
 }
